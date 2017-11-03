@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  background-color: #f0f2f5;
+}
+
+.logo {
+  text-align: left;
+  height: 64px;
+  margin-left: 30px;
+  display: inline-table;
+}
+
+.logo span{
+  font-size: 16px;
+  font-family: Raleway,Hiragino Sans GB,sans-serif;
+  height: 80px;
+  line-height: 80px;
+  text-transform: uppercase;
+  color: #108ee9;
+}
+
+.layout {
+  display: table;
+  background-color: white;
+  width: 100vw;
+}
+
+.cover {
+  width: 250px;
+  height: 300px;
+  cursor: pointer;
+}
+
+.cover:hover {
+  -webkit-filter: blur(10px);
+}

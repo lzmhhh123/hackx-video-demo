@@ -1,0 +1,13 @@
+::1 GET /
+::1 GET /static/css/main.9399c830.css
+::1 GET /static/js/main.1e9a105b.js
+::1 GET /static/css/main.9399c830.css.map
+::1 GET /api/getFiles
+::1 GET /static/js/main.1e9a105b.js.map
+::1 GET /
+::1 POST /api/upload
+::1 GET /static/css/main.9399c830.css
+::1 GET /static/js/main.1e9a105b.js
+::1 GET /static/css/main.9399c830.css.map
+::1 GET /api/getFiles
+::1 GET /static/js/main.1e9a105b.js.map
