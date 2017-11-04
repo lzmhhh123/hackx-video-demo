@@ -25,7 +25,7 @@ export default class extends Component {
       console.log('in-uploading');
       setTimeout(() => {
         window.location.reload();
-      }, 30000);
+      }, 20000);
     }
   }
   render() {

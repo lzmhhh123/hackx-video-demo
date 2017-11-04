@@ -7,25 +7,41 @@ export default class extends Component {
   constructor() {
     super();
     this.state = {
-      labels: {"Aaa": 123},
+      labels: {},
       selectedKey: 'overview'
     }
     this.clickMenuItem = this.clickMenuItem.bind(this);
+    this.addTags = this.addTags.bind(this);
   }
   componentWillReceiveProps(nextProps) {
+    console.log('mainreceiveprops', nextProps);
     this.setState({
       selectedKey: nextProps.value
     });
   }
-  clickMenuItem(item, key) {
+  clickMenuItem(item) {
+    console.log('clickMenuItem', item.key);
     this.setState({
-      selectedKey: key
+      selectedKey: item.key
     });
+  }
+  addTags(data) {
+    let {labels} = this.state;
+    for (let i = 0; i < data.length; ++i) {
+      for (let key in data[i].scenes) {
+        let val = data[i].scenes[key];
+        if (labels[val.scenes_categories] === undefined) {
+          labels[val.scenes_categories] = 1;
+        } else labels[val.scenes_categories]++;
+      }
+    }
+    console.log(labels);
+    this.setState({labels});
   }
   render() {
     let label = new Array(26);
     for (let i = 0; i < 26; ++i) {
-      let letter = "A".charCodeAt();
+      let letter = "a".charCodeAt();
       let s = String.fromCharCode(letter + i);
       label[i] = s;
     }
@@ -69,7 +85,7 @@ export default class extends Component {
           </div>
         </div>
         <div style={{display: 'inline-table', marginLeft: 50, float: 'right'}}>
-          <Album val={this.state.selectedKey} />
+          <Album val={this.state.selectedKey} addTags={this.addTags} />
         </div>
       </div>
     );
