@@ -16,7 +16,7 @@ export default class extends Component {
   componentWillReceiveProps(nextProps) {
     console.log('mainreceiveprops', nextProps);
     this.setState({
-      selectedKey: nextProps.value
+      selectedKey: nextProps.val
     });
   }
   clickMenuItem(item) {
