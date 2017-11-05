@@ -173,6 +173,8 @@ def generate_result(filename):
             #elif match[1]:
             #    name = "nuo"i
             	print scenes[i], name
+                result_dict['scenes'][i] = {'time':scenes[i]/24.0,
+                                    'scenes_categories':"obama"}
 
         # forward pass
         #img = cv2.imencode('.jpg', img)
